@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<h1>
+    --- Responda! ---
+</h1>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+</head>
+<style>
+    body {
+        background-color: rgb(208, 172, 241);
+        color: rgb(255, 255, 255);
+        font: normal 20pt Arial;
+    }
+
+    .titulo {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .titulo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    li img {
+        margin-left: 10px;
+        width: 100px;
+        height: 100px;
+    }
+
+    input[type="radio"] {
+        margin-right: 10px;
+    }
+</style>
+
+<body>
+
+    <p>Caso a resposta anterior tenha sido "Sim", escolha a opção desejada. Se a resposta foi "Não", tchau.</p>
+
+    <ul>
+        <li>
+            <input type="radio" name="opcao" id="opcao1" value="Uma massagem nas costas">
+            <label for="opcao1">Uma massagem nas costas</label>
+            <img src="image/Como-fazer-massagens-nas-costas.jpg" alt="Ícone" width="100">
+        </li>
+
+        <li>
+            <input type="radio" name="opcao" id="opcao2" value="Um pix de dois reais :D">
+            <label for="opcao2">Um pix de dois reais :D</label>
+            <img src="image/2_Brazil_real_Second_Obverse.jpg" alt="Ícone" width="100">
+        </li>
+
+        <li>
+            <input type="radio" name="opcao" id="opcao3" value="Um Mango Loco">
+            <label for="opcao3">Um Mango Loco</label>
+            <img src="image/88216-energetico-monster-energy-mango-loco-lata-473ml.jpg" alt="Ícone" width="100">
+        </li>
+
+        <li>
+            <input type="radio" name="opcao" id="opcao4" value="Um Civic 2008 preto">
+            <label for="opcao4">Um Civic 2008 preto</label>
+            <img src="image/334e0501681135e7ef4a37d070e099d1.jpg" alt="Ícone" width="100">
+        </li>
+        
+        <li>
+            <input type="radio" name="opcao" id="opcao5" value="Um anão fantasiado de Batman">
+            <label for="opcao5">Um anão fantasiado de Batman</label>
+            <img src="image/Captura de tela 2025-03-22 164402.png" alt="Ícone" width="100">
+        </li>
+    </ul>
+
+    <p id="resultado">Faça sua escolha :3 </p>
+
+    <script>
+        const radios = document.querySelectorAll('input[type="radio"]');
+        const resultado = document.getElementById('resultado');
+
+        radios.forEach(radio => {
+            radio.addEventListener('change', () => {
+                const escolha = document.querySelector('input[name="opcao"]:checked');
+                if (escolha) {
+                    resultado.textContent = `Você escolheu: ${escolha.value}`;
+                }
+            });
+        });
+
+        window.alert('Atenção!!!!!')
+        window.confirm('Vou te fazer uma pergunta')
+        window.confirm('Fica esperto, hein')
+        window.confirm('A pergunta é bem séria.......')
+        window.confirm('Aí vai a pergunta')
+        window.prompt('Você me ama? (Se escrever que não vou te bater)')
+
+    </script>
+</body>
+
+</html>
